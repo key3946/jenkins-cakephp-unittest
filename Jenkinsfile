@@ -7,7 +7,7 @@ node{
     sh 'rm -r -f ./jenkins-cakephp-unittest'
     sh 'ls'
     sh 'git clone https://github.com/key3946/jenkins-cakephp-unittest.git'
-    sh 'chmod 777 ./jenkins-cakephp-unittest/*'
+    sh 'chmod +x ./jenkins-cakephp-unittest/cakephp/lib/Cake/Console/cake'
 
     stage 'docker-run'
     def testImage = docker.build("test-image","./jenkins-cakephp-unittest")
