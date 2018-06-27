@@ -17,7 +17,7 @@ node{
             sh 'pwd'
             sh 'composer require --dev phpunit/phpunit 3.7.*'
             sh 'ls'
-            sh 'ls vender'
+            sh 'ls vendor'
             sh 'cat /app/Config/bootstrap.php'
             sh './jenkins-cakephp-unittest/cakephp/lib/Cake/Console/cake test core AllTests'
         }
