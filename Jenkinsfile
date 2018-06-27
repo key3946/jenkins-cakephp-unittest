@@ -3,15 +3,15 @@ node{
     sh 'pwd'
 
     stage 'ls'
-    sh 'rm -r -f ./*'
+    sh 'rm -r -f ./jenkins-cakephp-unittest'
     sh 'ls'
-    sh 'git clone https://github.com/key3946/jenkins-cakephp-unittest.git ./'
+    sh 'git clone https://github.com/key3946/jenkins-cakephp-unittest.git'
     sh 'pwd'
     sh 'ls'
-    sh 'cat Dockerfile'
+    sh 'cat jenkins-cakephp-unittest/Dockerfile'
 
     stage 'docker'
-    def testImage = docker.build("test-image",".")
+    def testImage = docker.build("test-image","./jenkins-cakephp-unittest")
 
     testImage.inside {
             sh 'git clone https://github.com/key3946/jenkins-cakephp-unittest.git'
