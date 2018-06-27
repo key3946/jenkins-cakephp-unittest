@@ -10,7 +10,6 @@ node{
     def testImage = docker.build("test-image",".")
 
     testImage.inside {
-            sh 'yum -y install git'
             sh 'git clone https://github.com/key3946/jenkins-cakephp-unittest.git'
             sh 'cd jenkins-cakephp-unittest'
             sh 'composer require --dev phpunit/phpunit ^4'
