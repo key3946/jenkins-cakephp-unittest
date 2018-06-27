@@ -16,8 +16,7 @@ node{
     testImage.inside {
             sh 'php --version'
             sh 'ls'
-            sh 'rm -r -f ./*'
             sh 'composer require --dev phpunit/phpunit ^4'
-            sh './vendor/bin/phpunit --bootstrap vendor/autoload.php test/SampleTest'
+            sh './vendor/bin/phpunit --bootstrap vendor/autoload.php jenkins-cakephp-unittest/test/SampleTest'
         }
 }
