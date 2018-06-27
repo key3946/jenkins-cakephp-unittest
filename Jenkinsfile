@@ -13,9 +13,7 @@ node{
     def testImage = docker.build("test-image2","./jenkins-cakephp-unittest")
 
     testImage.inside {
-            sh 'ls /var/lib/jenkins/workspace/testpp/jenkins-cakephp-unittest/cakephp/lib/Cake'
-            sh 'mkdir /var/lib/jenkins/workspace/testpp/jenkins-cakephp-unittest/cakephp/lib/Cake/TestSuite/PHPUnit'
-            sh 'cp ./vendor/autoload.php /var/lib/jenkins/workspace/testpp/jenkins-cakephp-unittest/cakephp/lib/Cake/TestSuite/PHPUnit/autoload.php'
+            sh 'cp ./vendor/autoload.php /usr/local/bin/phpunit/autoload.php'
             sh './jenkins-cakephp-unittest/cakephp/lib/Cake/Console/cake test core AllTests'
         }
 }
