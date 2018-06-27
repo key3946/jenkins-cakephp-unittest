@@ -16,6 +16,7 @@ node{
             sh 'cd jenkins-cakephp-unittest'
             sh 'pwd'
             sh 'composer require --dev phpunit/phpunit 3.7.*'
+            sh 'ls'
             sh './jenkins-cakephp-unittest/cakephp/lib/Cake/Console/cake test core AllTests'
         }
 }
