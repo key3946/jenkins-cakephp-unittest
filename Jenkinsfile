@@ -3,6 +3,7 @@ node{
     sh 'pwd'
 
     stage 'ls'
+    sh 'rm -f jenkins-cakephp-unittest'
     sh 'git clone https://github.com/key3946/jenkins-cakephp-unittest.git'
     sh 'cd jenkins-cakephp-unittest'
     sh 'pwd'
