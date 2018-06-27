@@ -10,7 +10,7 @@ node{
     sh 'chmod +x ./jenkins-cakephp-unittest/cakephp/lib/Cake/Console/cake'
 
     stage 'docker-run'
-    def testImage = docker.build("test-image","./jenkins-cakephp-unittest")
+    def testImage = docker.build("test-image2","./jenkins-cakephp-unittest")
 
     testImage.inside {
             sh 'composer require --dev phpunit/phpunit ^4'
