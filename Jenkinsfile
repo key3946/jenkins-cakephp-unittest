@@ -13,6 +13,6 @@ node{
 
     testImage.inside {
             sh 'composer require --dev phpunit/phpunit ^4'
-            sh './lib/Cake/Console/cake test core AllTests'
+            sh './jenkins-cakephp-unittest/cakephp/lib/Cake/Console/cake test core AllTests'
         }
 }
