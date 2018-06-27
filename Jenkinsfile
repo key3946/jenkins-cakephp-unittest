@@ -13,6 +13,7 @@ node{
     def testImage = docker.build("test-image2","./jenkins-cakephp-unittest")
 
     testImage.inside {
+
             sh './jenkins-cakephp-unittest/cakephp/lib/Cake/Console/cake test core AllTests'
         }
 }
