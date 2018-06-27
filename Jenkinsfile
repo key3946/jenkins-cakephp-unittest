@@ -4,6 +4,7 @@ node{
 
     stage 'ls'
     sh 'rm -r -f ./*'
+    sh 'ls'
     sh 'git clone https://github.com/key3946/jenkins-cakephp-unittest.git ./'
     sh 'pwd'
     sh 'ls'
