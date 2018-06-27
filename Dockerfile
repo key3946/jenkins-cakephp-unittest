@@ -1,11 +1,9 @@
 FROM centos:6
 
 RUN yum -y update && yum install -y epel-release wget unzip git && \
-    yum install -y  --enablerepo=remi,remi-php56 php php-devel php-mbstring php-pdo php-gd php-xml php-mcrypt && \
-    cd /usr/local/bin && \
-    wget -O phpunit https://phar.phpunit.de/phpunit-4.phar && \
-    chmod +x phpunit
+    yum install -y  --enablerepo=remi,remi-php56 php php-devel php-mbstring php-pdo php-gd php-xml php-mcrypt
 
+RUN sh -c 'wget -c https://phar.phpunit.de/phpunit-3.7.38.phar -O phpunit.phar && chmod +x phpunit.phar && mv phpunit.phar /usr/local/bin/phpunit'
 RUN mkdir /var/php -p
 WORKDIR /var/php
 COPY php.ini /etc/
