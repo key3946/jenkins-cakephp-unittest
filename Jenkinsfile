@@ -2,6 +2,7 @@ node{
     stage 'pwd'
     sh 'pwd'
 
+
     stage 'ls'
     sh 'rm -r -f ./jenkins-cakephp-unittest'
     sh 'ls'
