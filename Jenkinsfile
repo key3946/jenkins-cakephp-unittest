@@ -4,6 +4,7 @@ node{
 
     stage 'ls'
     sh 'ls'
+    sh 'cat Dockerfile'
 
     stage 'docker'
     def testImage = docker.build("test-image",".")
