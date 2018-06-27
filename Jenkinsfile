@@ -9,6 +9,8 @@ node{
     def testImage = docker.build("test-image",".")
 
     testImage.inside {
-            sh 'php --version'
+            sh 'git clone https://github.com/key3946/jenkins-cakephp-unittest.git'
+            sh
+
         }
 }
