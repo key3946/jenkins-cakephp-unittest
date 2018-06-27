@@ -3,7 +3,8 @@ node{
     sh 'pwd'
 
     stage 'ls'
-    sh 'ls'
+    sh 'git clone https://github.com/key3946/jenkins-cakephp-unittest.git'
+    sh 'cd jenkins-cakephp-unittest'
     sh 'cat Dockerfile'
 
     stage 'docker'
