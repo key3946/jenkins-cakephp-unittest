@@ -6,7 +6,7 @@ node{
     sh 'ls'
 
     stage 'docker'
-    def testImage = docker.build("test-image","./dockerfile")
+    def testImage = docker.build("test-image","./Dockerfile")
 
     testImage.inside {
             sh 'php --version'
