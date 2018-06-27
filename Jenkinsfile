@@ -18,7 +18,7 @@ node{
             sh 'composer require --dev phpunit/phpunit 3.7.*'
             sh 'ls'
             sh 'ls vendor'
-            sh 'cat jenkins-cakephp-unittest/app/Config/bootstrap.php'
+            sh 'cat ./jenkins-cakephp-unittest/cakephp/app/Config/bootstrap.php'
             sh './jenkins-cakephp-unittest/cakephp/lib/Cake/Console/cake test core AllTests'
         }
 }
