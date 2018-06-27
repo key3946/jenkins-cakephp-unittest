@@ -10,7 +10,8 @@ node{
 
     testImage.inside {
             sh 'git clone https://github.com/key3946/jenkins-cakephp-unittest.git'
-            sh
-
+            sh 'cd jenkins-cakephp-unittest'
+            sh 'composer require --dev phpunit/phpunit ^4'
+            sh './vendor/bin/phpunit --bootstrap vendor/autoload.php test/SampleTest'
         }
 }
