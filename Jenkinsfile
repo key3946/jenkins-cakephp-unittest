@@ -8,8 +8,8 @@ node{
     stage 'docker'
     docker.image
 
-    def customImage = docker.build("test:${env.BUILD_ID}")
-    customImage.inside {
+    def testImage = docker.build("test-image","./dockerfile")
+    testImage.inside {
             sh 'php --version'
         }
 }
