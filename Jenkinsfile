@@ -17,6 +17,19 @@ pipeline {
                 sh 'cd cakephp && php ./lib/Cake/Console/cake.php mycmd'
                 sh 'cd cakephp && php ./lib/Cake/Console/cake.php mycmd main2'
             }
+            post {
+                always{
+                    step([
+                            $class: 'WarningsPublisher',
+                            consoleParsers: [
+                                    [parserName: 'PHP Runtime'],
+                            ],
+                            canComputeNew: false,
+                            canResolveRelativesPaths: false,
+                            usePreviousBuildAsReference: true
+                    ])
+                }
+            }
         }
     }
 }
