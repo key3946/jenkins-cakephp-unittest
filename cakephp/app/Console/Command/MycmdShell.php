@@ -10,6 +10,10 @@ class MycmdShell extends Shell
 {
 	function main()
 	{
+		$test_arr = array(1, 2);
+
+		print($test_arr[3]);
+
 		$this->out('HELLO WOOOOOOOOOOOLD'); // 標準出力には $this->out() を利用。
 	}
 
