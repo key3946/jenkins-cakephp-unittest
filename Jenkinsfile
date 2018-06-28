@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('prepare-test') {
             steps {
-                sh 'cd cakephp && composer update && ls venders'
+                sh 'cd cakephp && composer update && ls vendors'
                 sh 'chmod +x cakephp/lib/Cake/Console/cake'
             }
         }
