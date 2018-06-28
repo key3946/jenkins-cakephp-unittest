@@ -19,7 +19,7 @@ class MycmdShell extends Shell
 
 	function main2()
 	{
-		$this->err('[ERROR] this is what?');
+		$this->error('エラアァ','[ERROR] this is what?');
 	}
 }
 
