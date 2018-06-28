@@ -3,7 +3,9 @@ pipeline{
     stages{
         stage('clean'){
             steps {
-                deleteDir()
+                dir('./'){
+                    deleteDir()
+                }
             }
         }
         stage('checkout'){
