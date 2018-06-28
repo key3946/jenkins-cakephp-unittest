@@ -9,12 +9,9 @@ pipeline{
             checkout scm
         }
     }
-        stage 'pwd'
-        sh 'pwd'
     stage('docker-run'){
         steps {
                 sh 'ls'
-            }
         }
     }
 }
