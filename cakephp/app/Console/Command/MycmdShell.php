@@ -19,7 +19,7 @@ class MycmdShell extends Shell
 
 	function main2()
 	{
-		$this->out('[ERROR] this is EROOOOOOOOOOOOOOOR'); // 標準出力には $this->out() を利用。
+		$this->err('[ERROR] this is what?');
 	}
 }
 
