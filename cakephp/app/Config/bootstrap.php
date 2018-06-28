@@ -22,7 +22,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-require '/var/lib/jenkins/workspace/testpp@2/cakephp/vendor/autoload.php';
+require '/var/lib/jenkins/workspace/testpp/cakephp/vendor/autoload.php';
 
 // Setup a 'default' cache configuration for use in the application.
 Cache::config('default', array('engine' => 'File'));
