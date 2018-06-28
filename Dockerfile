@@ -13,3 +13,4 @@ php -r "unlink('composer-setup.php');" ;\
 mv composer /usr/local/bin/composer
 
 RUN cd /usr/local/bin && composer install
+COPY /usr/local/bin/PHPUnit/autoload.php /usr/local/bin/PHPUnit/Autoload.php
