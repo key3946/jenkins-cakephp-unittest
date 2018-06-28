@@ -153,7 +153,7 @@ class CakeTestSuiteDispatcher {
 				break;
 			}
 		}
-		include 'Pdwfaload.php';
+		include 'PHPUnit' . DS . 'Autoload.php';
 		return class_exists('PHPUnit_Framework_TestCase');
 	}
 
