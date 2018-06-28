@@ -7,8 +7,6 @@
  * Time: 10:08
  */
 
-require_once APP . DS . 'Vendor' . DS . 'PHPUnit' . DS . 'autoload.php';
-
 class AllTests extends CakeTestSuite
 {
 	public static function suite()
