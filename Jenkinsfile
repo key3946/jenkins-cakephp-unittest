@@ -3,8 +3,7 @@ pipeline{
     stages{
         stage('docker-run'){
             steps {
-                    sh './cakephp/lib/Cake/Console/cake'
-                    sh 'ls'
+                    sh 'php --verison'
             }
         }
     }
