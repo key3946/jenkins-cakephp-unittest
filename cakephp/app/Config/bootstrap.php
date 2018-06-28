@@ -107,7 +107,7 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
-if (file_exists(ROOT .  DS . 'vendor' . DS . 'autoload.php'))
-{
-	require_once ROOT . DS . 'vendor' . DS . 'autoload.php';
-}
+//if (file_exists(ROOT .  DS . 'vendor' . DS . 'autoload.php'))
+//{
+//	require_once ROOT . DS . 'vendor' . DS . 'autoload.php';
+//}
