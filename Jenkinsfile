@@ -1,19 +1,22 @@
 node{
-    stage 'pwd'
-    sh 'pwd'
-
-
-    stage 'ls'
-    sh 'rm -r -f ./jenkins-cakephp-unittest'
-    sh 'ls'
-    sh 'git clone https://github.com/key3946/jenkins-cakephp-unittest.git'
-    sh 'chmod +x ./jenkins-cakephp-unittest/cakephp/lib/Cake/Console/cake'
-
-    stage 'docker-run'
-    def testImage = docker.build("test-image2","./jenkins-cakephp-unittest")
-
-    testImage.inside {
-            sh 'cp ./vendor/autoload.php /usr/local/bin/phpunit'
-            sh './jenkins-cakephp-unittest/cakephp/lib/Cake/Console/cake test core AllTests'
+    stage('clean'){
+        steps {
+            deleteDir()
         }
-}
+    }
+    stage('checkout'){
+        steps {
+            checkout scm
+        }
+    }
+        stage 'pwd'
+        sh 'pwd'
+    stage('docker-run'){
+        steps {
+                def testImage = docker.build("test-image2","./jenkins-cakephp-unittest"
+                testImage.inside {
+                            sh './jenkins-cakephp-unittest/cakephp/lib/Cake/Console/cake test core AllTests'
+                        }
+            }
+
+    }
