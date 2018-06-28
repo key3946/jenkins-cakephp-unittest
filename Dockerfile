@@ -12,4 +12,4 @@ php composer-setup.php --filename=composer;\
 php -r "unlink('composer-setup.php');" ;\
 mv composer /usr/local/bin/composer
 
-RUN cd /usr/local/bin && composer install && cat PHPUnit/autoload.php
+RUN cd /usr/local/bin && composer install && mv PHPUnit/autoload.php PHPUnit/Autoload.php
