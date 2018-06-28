@@ -15,6 +15,7 @@ pipeline{
         }
         stage('docker-run'){
             steps {
+                    sh 'cd /var/php'
                     sh 'ls'
             }
         }
