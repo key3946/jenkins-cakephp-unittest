@@ -14,14 +14,21 @@ pipeline {
         }
         stage('shell-test') {
             steps {
-                try{
-                    node{
-                        sh 'cd cakephp && php ./lib/Cake/Console/cake.php mycmd'
-                        sh 'cd cakephp && php ./lib/Cake/Console/cake.php mycmd main2'
-                    }
-                } finally {
-                    step([$class: 'LogParserPublisher', parsingRulesPath: 'jenkins-rule-logparser', useProjectRule: false])
-                }
+                sh 'cd cakephp && php ./lib/Cake/Console/cake.php mycmd'
+                sh 'cd cakephp && php ./lib/Cake/Console/cake.php mycmd main2'
+//                try{
+//                    node{
+//                        sh 'cd cakephp && php ./lib/Cake/Console/cake.php mycmd'
+//                        sh 'cd cakephp && php ./lib/Cake/Console/cake.php mycmd main2'
+//                    }
+//                } finally {
+//                    step([$class: 'LogParserPublisher', parsingRulesPath: 'jenkins-rule-logparser', useProjectRule: false])
+//                }
+            }
+        }
+        stage('clean workspace'){
+            steps{
+                cleanWs()
             }
         }
     }
