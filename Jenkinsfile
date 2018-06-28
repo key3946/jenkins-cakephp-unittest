@@ -9,7 +9,7 @@ pipeline {
         }
         stage('unit-test'){
             steps{
-                sh 'cd cakephp/app && ls && php ../lib/Cake/Console/cake.php test app AllTests'
+                sh 'cd cakephp/app && ls && ls Vendor && php ../lib/Cake/Console/cake.php test app AllTests'
             }
         }
     }
