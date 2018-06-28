@@ -25,7 +25,7 @@ class MycmdShell extends Shell
 			$test_arr = array(1, 2);
 			print($test_arr[3]);
 			$this->out('OK'); // 標準出力には $this->out() を利用。
-		} catch (Exception $e) {
+		} catch (ErrorException $e) {
 			$previous = $e->getPrevious();
 			printf("%s %s(%d)\n", $e->getMessage(), $e->getFile(), $e->getLine());
 			printf("# %s %s(%d)\n", $previous->getMessage(), $previous->getFile(), $previous->getLine());
