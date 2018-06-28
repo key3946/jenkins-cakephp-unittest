@@ -12,4 +12,4 @@ php composer-setup.php --filename=composer;\
 php -r "unlink('composer-setup.php');" ;\
 mv composer /usr/local/bin/composer
 
-RUN cd /usr/local/bin && php composer.phar require --dev phpunit/phpunit:"3.7.38"
+RUN cd /usr/local/bin && composer install
