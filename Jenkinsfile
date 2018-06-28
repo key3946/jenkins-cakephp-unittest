@@ -14,9 +14,8 @@ pipeline {
         }
         stage('shell-test') {
             steps {
-                sh 'cd cakephp && php ./lib/Cake/Console/cake.php mycmd'
-                sh 'cd cakephp && php ./lib/Cake/Console/cake.php mycmd main2'
-                step([$class: 'LogParserPublisher', failBuildOnError: true, projectRulePath: 'jenkins-rule-logparser', showGraphs: true, unstableOnWarning: true, useProjectRule: true])
+                sh 'cd cakephp && php ./lib/Cake/Console/cake.php rapper'
+//                step([$class: 'LogParserPublisher', failBuildOnError: true, projectRulePath: 'jenkins-rule-logparser', showGraphs: true, unstableOnWarning: true, useProjectRule: true])
 
 //                try{
 //                    node{
