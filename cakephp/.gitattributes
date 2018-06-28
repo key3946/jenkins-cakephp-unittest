@@ -15,6 +15,7 @@
 *.css text
 *.ini text
 *.properties text
+
 *.txt text
 *.xml text
 *.yml text
@@ -33,3 +34,6 @@
 *.ico binary
 *.mo binary
 *.pdf binary
+*.woff binary
+*.ttf binary
+*.eot binary
