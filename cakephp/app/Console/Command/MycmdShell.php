@@ -14,7 +14,7 @@ class MycmdShell extends Shell
 
 		print($test_arr[3]);
 
-		$this->out('HELLO WOOOOOOOOOOOLD'); // 標準出力には $this->out() を利用。
+		$this->out('Error'); // 標準出力には $this->out() を利用。
 	}
 
 	function main2()
