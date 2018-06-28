@@ -1,17 +1,19 @@
 pipeline{
-    stage('clean'){
-        steps {
-            deleteDir()
+    stages{
+        stage('clean'){
+            steps {
+                deleteDir()
+            }
         }
-    }
-    stage('checkout'){
-        steps {
-            checkout scm
+        stage('checkout'){
+            steps {
+                checkout scm
+            }
         }
-    }
-    stage('docker-run'){
-        steps {
-                sh 'ls'
+        stage('docker-run'){
+            steps {
+                    sh 'ls'
+            }
         }
     }
 }
