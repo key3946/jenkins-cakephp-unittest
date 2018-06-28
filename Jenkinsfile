@@ -14,11 +14,12 @@ pipeline {
         }
         stage('shell-test') {
             steps {
-                sh 'cd cakephp && php ./lib/Cake/Console/cake.php mycmd'
-                sh 'cd cakephp && php ./lib/Cake/Console/cake.php mycmd main2'
-            }
-            post {
-                always {
+                try{
+                    node{
+                        sh 'cd cakephp && php ./lib/Cake/Console/cake.php mycmd'
+                        sh 'cd cakephp && php ./lib/Cake/Console/cake.php mycmd main2'
+                    }
+                } finally {
                     step([$class: 'LogParserPublisher', parsingRulesPath: 'jenkins-rule-logparser', useProjectRule: false])
                 }
             }
