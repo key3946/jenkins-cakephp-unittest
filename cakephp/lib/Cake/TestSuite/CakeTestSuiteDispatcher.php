@@ -153,7 +153,7 @@ class CakeTestSuiteDispatcher {
 				break;
 			}
 		}
-		include 'PHPUnit' . DS . 'Autoload.php';
+		include '/var/lib/jenkins/workspace/testpp/cakephp/vendor/autoload.php';
 		return class_exists('PHPUnit_Framework_TestCase');
 	}
 
