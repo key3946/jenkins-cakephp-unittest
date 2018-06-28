@@ -13,11 +13,10 @@ node{
         sh 'pwd'
     stage('docker-run'){
         steps {
-                def testImage = docker.build("test-image2","./jenkins-cakephp-unittest"
-                testImage.inside {
-                            sh './jenkins-cakephp-unittest/cakephp/lib/Cake/Console/cake test core AllTests'
-                        }
+            def testImage = docker.build("test-image2","./jenkins-cakephp-unittest"
+            testImage.inside {
+                        sh './jenkins-cakephp-unittest/cakephp/lib/Cake/Console/cake test core AllTests'
             }
-
+        }
     }
 }
