@@ -18,7 +18,7 @@ class MycmdShell extends Shell
 
 	function main2()
 	{
-		$this->error("エラーじゃないよ");
+		print("I am Space. 日本からこんにちは");
 	}
 }
 
